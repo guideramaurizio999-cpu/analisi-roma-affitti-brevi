@@ -1,6 +1,6 @@
 # Analisi degli affitti brevi a Roma
 
-Progetto di analisi in SQL (PostgreSQL) sui dati di Inside Airbnb per Roma, snapshot del 17 settembre 2026.
+Progetto di analisi in SQL (PostgreSQL) sui dati di Inside Airbnb per Roma, (17 settembre 2026).
 
 ## Domanda
 Dove si concentra il valore degli affitti brevi a Roma? Prezzo e domanda vanno insieme nei vari quartieri?
