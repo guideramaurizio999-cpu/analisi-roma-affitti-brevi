@@ -50,6 +50,36 @@ Dove si concentra il valore degli affitti brevi a Roma? Prezzo e domanda vanno i
 - Il prezzo è quello dell'annuncio, non quello pagato.
 - Le recensioni sono un indicatore indiretto della domanda, non le prenotazioni reali.
 
+### Perché la media e non la mediana
+Motivi per la scelta della mediana al posto della media: maggiore facilità di aggregazione (dalle medie dei quartieri e dal numero di annunci si ricava la media complessiva, cosa che con le mediane non è possibile). 
+avendo il limite che pochi valori possono spostarla molto. Per questo ho escluso gli annunci sopra i 1.000 € a notte e ho verificato la scelta confrontando la media con la mediana, che non risente degli estremi. La mediana sarebbe stata una scelta altrettanto valida.
+
+| Quartiere | Media (tutti gli annunci) | Media (fino a 1.000 €) | Mediana (tutti gli annunci) |
+|---|---|---|---|
+| I Centro Storico | 306 | 273 | 236 |
+| VIII Appia Antica | 231 | 162 | 145 |
+| XIII Aurelia | 230 | 200 | 174 |
+| IV Tiburtina | 229 | 140 | 125 |
+| II Parioli/Nomentano | 216 | 197 | 171 |
+| VII San Giovanni/Cinecittà | 213 | 170 | 150 |
+| IX Eur | 197 | 154 | 127 |
+| XII Monte Verde | 190 | 174 | 157 |
+| XV Cassia/Flaminia | 188 | 169 | 135 |
+| XIV Monte Mario | 178 | 159 | 143 |
+| III Monte Sacro | 178 | 151 | 128 |
+| XI Arvalia/Portuense | 166 | 150 | 136 |
+| V Prenestino/Centocelle | 153 | 133 | 122 |
+| X Ostia/Acilia | 146 | 135 | 120 |
+| VI Roma delle Torri | 133 | 121 | 113 |
+
+### Cosa mostra la tabella
+- **La mediana è leggermente più bassa della media**: la media filtrata sta in media circa 20 € sopra la mediana.
+- **Gli estremi pesano soprattutto su alcuni quartieri.** Tiburtina passa da 229 € a 140 € escludendo gli annunci sopra i 1.000 €, e Appia Antica da 231 € a 162 €. Con la media non filtrata sembravano tra i più cari (4° e 2° posto); con la media filtrata o con la mediana scendono al 12° posto e al 6°-7°.
+- **La classifica è stabile agli estremi.** Il Centro Storico è primo e Roma delle Torri ultima con tutti e tre gli indicatori, e i primi cinque quartieri (Centro Storico, Aurelia, Parioli/Nomentano, Monte Verde, San Giovanni) sono gli stessi e nello stesso ordine con la media filtrata e con la mediana.
+- **Nelle posizioni intermedie la classifica dipende dall'indicatore**: ad esempio Cassia/Flaminia è sesta con la media filtrata e nona con la mediana. Le differenze di pochi euro tra quartieri vicini in classifica vanno quindi lette con cautela.
+
+**Conclusione:** il filtro a 1.000 € e la mediana portano allo stesso quadro generale, mentre la media non filtrata sovrastima alcuni quartieri. Le conclusioni sui quartieri più cari e più economici sono solide; il dettaglio delle posizioni centrali lo è meno.
+
 ## Possibili sviluppi
 - Boost alla Dashbord: filtro nella dashboard per includere o escludere i valori estremi.
 - Analisi degli host con più annunci: verificare la presenza di super proprietari (host che gestiscono più annunci) e determinare quanti B&B sono gestiti da super proprietari rispetto a quelli gestiti da piccoli proprietari.
