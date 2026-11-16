@@ -40,10 +40,10 @@ Dove si concentra il valore degli affitti brevi a Roma? Prezzo e domanda vanno i
 - Centocelle e San Giovanni hanno prezzi più bassi e domanda alta; Cassia/Flaminia ed EUR prezzi medio-alti e poca domanda.
 
 ## Scelte e controlli
-**Valori estremi.** Ho escluso gli annunci sopra i 1.000 € a notte (476 annunci, circa l'1%), alcuni annunci superavano i 30.000 € a notte, questo alterava la media. Esempio: a Tiburtina il prezzo medio è 229 € con gli estremi, ma scende a 140 € senza i prezzi estremi. La soglia è una mia scelta. 
+**Valori estremi.** Ho escluso gli annunci sopra i 1.000 € a notte (476 annunci, l'1,4%), alcuni annunci superavano i 30.000 € a notte, questo alterava la media. Esempio: a Tiburtina il prezzo medio è 229 € con gli estremi, ma scende a 140 € senza i prezzi estremi. La soglia è una mia scelta. 
 
 **Annunci inattivi.** Ho verificato se togliere gli annunci inattivi cambiasse il quadro:
-- Solo 1.245 annunci su 33.933 (circa il 3%) non sono prenotabili, e solo 6 dei 476 annunci sono sopra i 1.000 €. Eliminarli non risolverebbe i prezzi anomali.
+- Solo 1.245 annunci su 33.933 (circa il 3,7%) non sono prenotabili, e solo 6 dei 476 annunci snon sono prenotabili. Eliminarli non risolverebbe i prezzi anomali.
 - Il 22,6% degli annunci non ha recensioni negli ultimi 12 mesi; tra gli annunci sopra i 1.000 € la quota sale al 40,5%. È un indizio che molti prezzi estremi siano poco credibili, ma non una prova.
 
 ## Limiti
