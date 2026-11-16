@@ -30,7 +30,7 @@ Dove si concentra il valore degli affitti brevi a Roma? Prezzo e domanda vanno i
 - `10_annunci_sopra_i_mille`: dove si trovano gli annunci sopra i 1.000 € a notte
 - `11_confronto_senza_prezzi_estremi`: il confronto senza di loro (usato nella dashboard)
 
-**Controlli sugli indicatori (12-14)**
+**Controlli sugli indicatori (12-15)**
 - `12_quota_annunci_senza_recensioni`: quota di annunci senza recensioni negli ultimi 12 mesi, per quartiere
 - `13_annunci_non_disponibili_e_senza_recensioni`: Quanti annunci non sono prenotabili o non hanno recensioni
 - `14_prezzi_estremi_e_attivita`: annunci sopra 1.000 € a notte che sono anche inattivi o senza recensioni
