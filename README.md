@@ -34,6 +34,7 @@ Dove si concentra il valore degli affitti brevi a Roma? Prezzo e domanda vanno i
 - `12_quota_annunci_senza_recensioni`: quota di annunci senza recensioni negli ultimi 12 mesi, per quartiere
 - `13_annunci_non_disponibili_e_senza_recensioni`: Quanti annunci non sono prenotabili o non hanno recensioni
 - `14_prezzi_estremi_e_attivita`: annunci sopra 1.000 € a notte che sono anche inattivi o senza recensioni
+- `15_confronto_media_mediana`: confronto tra media e mediana del prezzo per quartiere
 
 ## Risultati principali
 - Il Centro Storico ha il 52% degli annunci, il prezzo medio più alto (circa 273 €) e la domanda maggiore (circa 20 recensioni medie per annuncio).
