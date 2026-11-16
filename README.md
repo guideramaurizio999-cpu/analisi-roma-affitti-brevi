@@ -51,8 +51,10 @@ Dove si concentra il valore degli affitti brevi a Roma? Prezzo e domanda vanno i
 - Le recensioni sono un indicatore indiretto della domanda, non le prenotazioni reali.
 
 ### Perché la media e non la mediana
-Motivi per la scelta della mediana al posto della media: maggiore facilità di aggregazione (dalle medie dei quartieri e dal numero di annunci si ricava la media complessiva, cosa che con le mediane non è possibile). 
-avendo il limite che pochi valori possono spostarla molto. Per questo ho escluso gli annunci sopra i 1.000 € a notte e ho verificato la scelta confrontando la media con la mediana, che non risente degli estremi. La mediana sarebbe stata una scelta altrettanto valida.
+### Perché la media e non la mediana
+Ho scelto la media perché, partendo dalla tabella già raggruppata per quartiere (prezzo medio e numero di annunci), permette di ricavare in seguito la media di tutta Roma, basta pesare ogni media per il numero di annunci del quartiere (con gli annunci fino a 1.000 € viene circa 223 €). Con le mediane ciò non è possibile. In questo modo la tabella resta riutilizzabile anche in altri progetti, senza ripartire dai dati originali.
+
+La media è però sensibile ai valori estremi, per questo motivo ho escluso gli annunci sopra i 1.000 € a notte e ho confrontato il risultato con la mediana (tabella qui sotto).
 
 | Quartiere | Media (tutti gli annunci) | Media (fino a 1.000 €) | Mediana (tutti gli annunci) |
 |---|---|---|---|
