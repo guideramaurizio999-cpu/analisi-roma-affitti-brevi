@@ -1,6 +1,6 @@
 # Analisi degli affitti brevi a Roma
 
-Progetto di analisi in SQL (PostgreSQL) e Power BI sui dati di Inside Airbnb per Roma, (17 settembre 2026).
+Progetto di analisi sui dati di Inside Airbnb per Roma,(17 settembre 2026).
 
 ## Domanda
 Dove si concentra il valore degli affitti brevi a Roma? Prezzo e domanda vanno insieme nei vari quartieri?
@@ -10,7 +10,12 @@ Dove si concentra il valore degli affitti brevi a Roma? Prezzo e domanda vanno i
 - 33.933 annunci con prezzo valido; 476 esclusi perché sopra i 1.000 € a notte; 33.457 analizzati nei 15 quartieri.
 - La domanda è misurata con le recensioni degli ultimi 12 mesi.
 
-## Le query
+## Strumenti utilizzati 
+- SQL (PostgreSQL) 
+- Power BI
+- Manus (ricerca)
+
+## Le query (SQL)
 **Controllo dei dati (01-05)**
 - `01_conta_righe`, `02_prezzi_nulli`, `03_prezzi_non_nulli`: righe e valori mancanti
 - `04_prezzi_crescenti`, `05_prezzi_decrescenti`: prezzi più bassi e più alti
@@ -35,18 +40,16 @@ Dove si concentra il valore degli affitti brevi a Roma? Prezzo e domanda vanno i
 - Centocelle e San Giovanni hanno prezzi più bassi e domanda alta; Cassia/Flaminia ed EUR prezzi medio-alti e poca domanda.
 
 ## Scelte e controlli
-**Valori estremi.** Ho escluso gli annunci sopra i 1.000 € a notte (476, l'1% degli annunci), con punte fino a 37.474 €, perché alteravano le medie. Esempio: a Tiburtina il prezzo medio è 229 € con gli estremi e 140 € senza. La soglia è una mia scelta.
+**Valori estremi.** Ho escluso gli annunci sopra i 1.000 € a notte (476 annunci, circa l'1%), alcuni annunci superavano i 30.000 € a notte, questo alterava la media. Esempio: a Tiburtina il prezzo medio è 229 € con gli estremi, ma scende a 140 € senza i prezzi estremi. La soglia è una mia scelta. 
 
 **Annunci inattivi.** Ho verificato se togliere gli annunci inattivi cambiasse il quadro:
-- Solo 1.245 annunci su 33.933 (circa il 3%) non sono prenotabili, e solo 6 dei 476 annunci sopra i 1.000 €: filtrarli non risolve i prezzi anomali.
+- Solo 1.245 annunci su 33.933 (circa il 3%) non sono prenotabili, e solo 6 dei 476 annunci sono sopra i 1.000 €. Eliminarli non risolverebbe i prezzi anomali.
 - Il 22,6% degli annunci non ha recensioni negli ultimi 12 mesi; tra gli annunci sopra i 1.000 € la quota sale al 40,5%. È un indizio che molti prezzi estremi siano poco credibili, ma non una prova.
-
-**Recensioni come indicatore di domanda.** Ho usato la media per annuncio e non il totale, per non penalizzare i quartieri più piccoli. La quota di annunci senza recensioni va dal 19,9% (Centro Storico) al 38,2% (Roma delle Torri). Spiegando solo in parte le differenze, perché anche gli annunci attivi delle zone periferiche ricevono meno recensioni. 
 
 ## Limiti
 - Il prezzo è quello dell'annuncio, non quello pagato.
 - Le recensioni sono un indicatore indiretto della domanda, non le prenotazioni reali.
 
 ## Possibili sviluppi
-- filtro nella dashboard per includere o escludere i valori estremi, 
-- analisi degli host con più annunci: verificare la presenza di super proprietari (host che gestiscono più annunci) e determinare quanti B&B sono gestiti da super proprietari rispetto a quelli gestiti da piccoli proprietari.
+- Boost alla Dashbord: filtro nella dashboard per includere o escludere i valori estremi.
+- Analisi degli host con più annunci: verificare la presenza di super proprietari (host che gestiscono più annunci) e determinare quanti B&B sono gestiti da super proprietari rispetto a quelli gestiti da piccoli proprietari.
